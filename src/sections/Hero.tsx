@@ -19,11 +19,9 @@ const Hero = () => {
           alt="React Logo"
           sx={{
             position: "absolute",
-            bottom: -30,
-            right: {
-              xs: "calc(50% - 30px)", //モバイル
-              sm: 170,
-            },
+            bottom: { xs: -60, sm: -30 }, // モバイルだと少し下げる
+            right: "50%",
+            transform: "translateX(50%)", // 中央寄せ
             width: 60,
             height: 60,
             zIndex: 0,
