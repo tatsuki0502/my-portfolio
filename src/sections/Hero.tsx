@@ -28,8 +28,8 @@ const Hero = () => {
         alt="React Logo"
         sx={{
           position: "absolute",
-          top: "70%",
-          left: "45%",
+          top: "50%",
+          left: "50%",
           width: 100,
           height: 100,
           opacity: 0.8,
