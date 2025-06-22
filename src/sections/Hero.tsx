@@ -20,7 +20,10 @@ const Hero = () => {
           sx={{
             position: "absolute",
             bottom: -30,
-            right: 170,
+            right: {
+              xs: "calc(50% - 30px)", //モバイル
+              sm: 170,
+            },
             width: 60,
             height: 60,
             zIndex: 0,
