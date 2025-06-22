@@ -27,17 +27,14 @@ const Hero = () => {
         src={ReactLogo}
         alt="React Logo"
         sx={{
-          position: "absolute",
-          top: "50%",
-          left: "50%",
-          width: 100,
-          height: 100,
-          opacity: 0.8,
-          transform: "translate(-50%, -50%)",
-          zIndex: 1,
+          width: { xs: 80, sm: 100, md: 120 },
+          height: "auto",
+          my: "auto",
           animation: `${rotate} 20s linear infinite`,
           objectFit: "contain",
+          mx: "auto",
           display: "block",
+          opacity: 0.8,
         }}
       />
     </Box>

@@ -5,7 +5,7 @@ const About = () => {
   return (
     // 複数要素を返す
     <>
-      <Box sx={{py: 8}}>
+      <Box sx={{py: 1}}>
         <Typography variant="h4" fontWeight="bold" gutterBottom textAlign="center">
           About
         </Typography>
