@@ -1,5 +1,5 @@
 import { Box, Typography, keyframes } from "@mui/material";
-import ReactLogo from "../assets/react-icon.png"; // 自分のロゴ画像に置き換え
+import ReactLogo from "../assets/react-icon.png"; 
 
 // アニメーション：ゆっくり回転する
 const rotate = keyframes`
