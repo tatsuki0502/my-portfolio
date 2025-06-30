@@ -5,7 +5,6 @@ import {
   Card,
   CardMedia,
   CardContent,
-  Chip,
   Stack,
   Divider,
 } from '@mui/material';
@@ -16,9 +15,8 @@ const learningList = [
     title: 'React × TypeScript 入門講座',
     image: udemy,
     description: 'Udemy講座。家計簿アプリを通してReact, TypeScript, Firebaseのフルスタック開発を学習中。',
-    progress: '40%',
   },
-  // 将来的に他講座追加可
+  // 将来的に他講座追加
 ];
 
 const Learning = () => (
@@ -54,7 +52,6 @@ const Learning = () => (
             <Typography variant="body2" sx={{ mb: 2 }}>
               {item.description}
             </Typography>
-            <Chip label={`進捗: ${item.progress}`} size="small" />
           </CardContent>
         </Card>
       ))}

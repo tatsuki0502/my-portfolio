@@ -11,7 +11,6 @@ const projectList = [
     title: 'ToDo管理アプリ',
     image: todo,
     description: 'シンプルで使いやすいタスク管理アプリ。React + TypeScript + Vite で構築。',
-    stack: ['React', 'TypeScript', 'Vite'],
     links: {
       github: 'https://github.com/tatsuki0502/todo-app',
       demo: 'https://tatsuki0502.github.io/todo-app',
@@ -22,7 +21,6 @@ const projectList = [
     title: '天気アプリ',
     image: weather,
     description: 'React + TypeScript + OpenWeatherMap API を用いた天気予報アプリ。',
-    stack: ['React', 'TypeScript', 'API'],
     links: {
       github: 'https://github.com/tatsuki0502/weather-app',
       demo: 'https://tatsuki0502.github.io/weather-app',
@@ -33,7 +31,6 @@ const projectList = [
     title: 'チャットアプリ',
     image: chat,
     description: 'React + Firebase を使ったリアルタイムチャットアプリ。Googleログイン対応。',
-    stack: ['React', 'TypeScript', 'Firebase'],
     links: {
       github: 'https://github.com/tatsuki0502/chat-app',
       demo: 'https://chat-app-mu-liard.vercel.app',

@@ -5,7 +5,8 @@ import About from './sections/About';
 import Skills from './sections/Skills';
 import Projects from './sections/Projects';
 import Learning from './sections/Learning';
-import Contact from './sections/Contact';
+// import Contact from './sections/Contact';
+import Products from './sections/Products';
 
 
 function App() {
@@ -16,7 +17,8 @@ function App() {
       <Skills />
       <Projects />
       <Learning />
-      <Contact />
+      <Products />
+      {/* <Contact /> */}
     </>
   );
 }

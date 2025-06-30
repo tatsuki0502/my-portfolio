@@ -1,11 +1,26 @@
-import React from 'react';
-import { Box, Typography, Stack, Link, IconButton, Divider } from '@mui/material';
-import { GitHub, Twitter } from '@mui/icons-material';
-import coconara from "../assets/coconala-icon.jpg";
+import React, { useState } from 'react';
+import { Box, Typography, Divider, TextField, Button } from '@mui/material';
 
 const Contact = () => {
+
+  const [form, setForm] = useState({ name: '', email: '', message: '' });
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setForm({ ...form, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    const res = await fetch('/api/contact', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(form),
+    });
+    alert(res.ok ? '送信しました！' : '送信に失敗しました');
+  };
+
   return (
-    <Box id="contact" sx={{ py: 8, px: 2, textAlign: 'center' }}>
+    <Box component="form" onSubmit={handleSubmit} sx={{ maxWidth: 500, mx: 'auto', mt: 4 }}>
       <Typography variant="h4" fontWeight="bold" gutterBottom>
         Contact
       </Typography>
@@ -16,21 +31,10 @@ const Contact = () => {
         お仕事のご依頼・ご相談などお気軽にご連絡ください。
       </Typography>
 
-      <Typography variant="body1" sx={{ mb: 4 }}>
-        📩 <Link href="mailto:kouno.t0502@gmail.com">kouno.t0502@gmail.com</Link>
-      </Typography>
-
-      <Stack direction="row" spacing={2} justifyContent="center">
-        <IconButton href="https://github.com/tatsuki0502" target="_blank" aria-label="GitHub">
-          <GitHub />
-        </IconButton>
-        <IconButton href="https://twitter.com/yourname" target="_blank" aria-label="Twitter">
-          <Twitter />
-        </IconButton>
-        <IconButton href="https://coconala.com/users/yourid" target="_blank" aria-label="Coconala">
-          <img src={coconara} alt="Coconala" width={24} height={24} />
-        </IconButton>
-      </Stack>
+      <TextField fullWidth margin="normal" label="お名前" name="name" value={form.name} onChange={handleChange} />
+      <TextField fullWidth margin="normal" label="メールアドレス" name="email" value={form.email} onChange={handleChange} />
+      <TextField fullWidth margin="normal" label="お問い合わせ内容" name="message" value={form.message} multiline rows={4} onChange={handleChange} />
+      <Button type="submit" variant="contained" fullWidth sx={{ mt: 2 }}>送信</Button>
     </Box>
   );
 };
